@@ -30,7 +30,7 @@ function MovieForm(props) {
   return (
     <React.Fragment>
       { props.movie ? (
-        <div>
+        <div data-testid="movie-form">
           <label htmlFor="title">Title</label><br/>
           <input id="title" type="text" placeholder="title" value={title}
                 onChange={ evt=> setTitle(evt.target.value)}

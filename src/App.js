@@ -72,14 +72,14 @@ function App() {
        <FontAwesomeIcon icon={faSignOutAlt} onClick={logoutUser}/>
       </header> 
       <div className="layout">
-          <div>
+          <div data-testid="list">
             <MovieList
               movies={movies}
               movieClicked={loadMovie}
               editClicked={editClicked}
               removeClicked={removeClicked}
             />
-            <button onClick={newMovie}>New movie</button>
+            <button data-testid="new-movie-btn" onClick={newMovie}>New movie</button>
           </div>
           <MovieDetails movie={selectedMovie} updateMovie={loadMovie}/>
           { editedMovie ? 
